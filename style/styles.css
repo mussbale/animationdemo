@@ -1,25 +1,41 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-    font-family: Arial, sans-serif;
+body{
+	//position: relative;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	justify-content:center;
+	background-color: #f0f0f0;
+	margin: 0;
+	font-family: Arial, sans-serif;
 }
 
-.dancing-text {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-    animation: dance 3s infinite linear;
+#vibrate-personal-info {
+	font-size: 24px;
+	margin: 50px;
+	font-weight: bold;
+	display: inline-block;
+	transition: transform 0.1s ease-in-out;
+	//position: absolute;
+}
+.welcome-animation {
+	font-size: 3rem;
+	font-weght: bold;
+	color: #333;
+	animation: dance 3s infinite linear;
 }
 
 @keyframes dance {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+.text-vibrate{
+	animation: vibration 0.2s infinite;
+}
+
+@keyframes vibration {
+	0% {transform: translate(0, 0);}
+	25% {transform: translate(2px, 2px);}
+	50% {transform: translate(-2px, -2px);}
+	75% {transform: translate(2px, -2px);}
+	100% {transform: translate(-2px, 2px);}
 }
